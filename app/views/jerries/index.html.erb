@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Jerries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jerries.each do |jerry| %>
+      <tr>
+        <td><%= jerry.name %></td>
+        <td><%= jerry.description %></td>
+        <td><%= jerry.picture %></td>
+        <td><%= link_to 'Show', jerry %></td>
+        <td><%= link_to 'Edit', edit_jerry_path(jerry) %></td>
+        <td><%= link_to 'Destroy', jerry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Jerry', new_jerry_path %>
+<br> 
+
+<button type="button" class="btn btn-warning">Whiskers</button> </br>
+

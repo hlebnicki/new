@@ -1,0 +1,2 @@
+class Jerry < ApplicationRecord
+end

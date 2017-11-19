@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @jerry.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @jerry.description %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @jerry.picture %>
+</p>
+
+<%= link_to 'Edit', edit_jerry_path(@jerry) %> |
+<%= link_to 'Back', jerries_path %>
