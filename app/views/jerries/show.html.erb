@@ -12,7 +12,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= @jerry.picture %>
+  <%= image_tag(@jerry.picture_url, width: 100) if @jerry.picture.present? %>
 </p>
 
 <%= link_to 'Edit', edit_jerry_path(@jerry) %> |

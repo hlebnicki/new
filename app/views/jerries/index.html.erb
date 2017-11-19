@@ -17,7 +17,7 @@
       <tr>
         <td><%= jerry.name %></td>
         <td><%= jerry.description %></td>
-        <td><%= jerry.picture %></td>
+        <td> <%= image_tag(jerry.picture_url, width: 100) if jerry.picture.present? %> </td>
         <td><%= link_to 'Show', jerry %></td>
         <td><%= link_to 'Edit', edit_jerry_path(jerry) %></td>
         <td><%= link_to 'Destroy', jerry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
